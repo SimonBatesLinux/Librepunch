@@ -15,9 +15,6 @@
     You should have received a copy of the GNU General Public License
     along with Librepunch.  If not, see <https://www.gnu.org/licenses/>.
 
-Version: Dev 0.1.0
-Desc: A user front end for time clocking.
-Notes: shutdown feature currently disabled
 """
 import os
 import time
@@ -28,12 +25,6 @@ import settings
 def clear():
     """ clear screen """
     os.system("clear")
-    
-def shutdown():
-    """ shutdown system """
-    os.system("echo shutting down")
-    pause()
-    exit()
 
 def pause():
     time.sleep(3)
