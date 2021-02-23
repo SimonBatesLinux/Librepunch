@@ -1,23 +1,36 @@
 """
-Version: Dev 0.1.0
-Desc: A user front end for time clocking.
-Notes: shutdown feature currently disabled
+
+	This file is part of Librepunch.
+
+    Librepunch is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Librepunch is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Librepunch.  If not, see <https://www.gnu.org/licenses/>.
+
 """
 import os
 import time
+import settings
+
+# universal functions
 
 def clear():
+    """ clear screen """
     os.system("clear")
-
-def shutdown():
-    os.system("echo shutting down")
-    pause()
-    exit()
 
 def pause():
     time.sleep(3)
 
 def numInput(text):
+    """ get only number inputs """
     cmd = input(text)
     if cmd != "":
         nums = "0123456789"
@@ -41,12 +54,9 @@ def numInput(text):
         
 
 class serverOffloader:
-    defPASS = "1234"
+    
     def __init__(self):
         pass
-    
-    def getPASS(self):
-        return self.defPASS
 
     def sndPin(self, pin):
         return True, "name"
@@ -81,25 +91,24 @@ class timeHandler:
 
 class interface:
 
-    welcome = "welcome!"
-    user_prompt  = "[user pin]$ "
-
     def __init__(self):
-        print(self.welcome)
+        clear()
+        print(settings.welcomeMessage)
+        print("    Librepunch  Copyright (C) 2021  Simon Bates\n    This program comes with ABSOLUTELY NO WARRANTY; for details type read the LICENSE file.")
         self.handler()
-
+        
     def handler(self):
-        cmd = numInput(self.user_prompt)
+        cmd = numInput(settings.user_prompt)
         while True:
             if cmd == "-error":
                 pass
             else:
                 handler.handleData(cmd)
             clear()
-            print("In bathroom:")
+            print(settings.location)
             for i in clocked:
                 print(i[1])
-            cmd = numInput(self.user_prompt)
+            cmd = numInput(settings.user_prompt)
 
 def init():
     global clocked
