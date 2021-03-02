@@ -18,49 +18,73 @@
 """
 import shelve
 import threading
+import sockets
 
 class adminAccess:
+        """ api for administrator """
+        
+        # todo
 	pass
 	
 class userAccess:
+        """ api for user client """
+        
+        #todo
 	pass
 	
 class eventHandlerk:
 	
 	def __init__(self):
-		
+                """ start event handler """
+
+		# start api handler
 		cli = threading.Thread(target=self.run)
 		cli.daemon = True
 		cli.start()
-		
+
+		# start temporary  testing interface
 		self.tempCLI()
 		
 	def run(self):
+                """ api handler """
+
 		global cmdStack
 		while True:
+
+                        # check for input
 			if cmdStack != []:
+
+                                # run all commands
 				temp = cmdStack
 				cmdStack = []
 				for i in temp:
 					self.proc(i)
 		
 	def tempCLI(self):
+                """ temporary cli for testing """
+                
 		cmd = input("temp$ ")
 		while True:
 			cmdStack.append(cmd)
 			cmd = input("temp$ ")
 			
 	def proc(self, cmd):
+                """ proccess all commands """
 		print("proccessed " + cmd)
 
 def init():
+
+        # global variables
 	global userData
 	userData = shelve.open("userData.dat")
 	
 	global cmdStack
 	cmdStack = []
-	
+
+	# start main handler
 	eventHandlerk()
 
 if __name__ == "__main__":
+
+        # check to ensure we're not imported
 	init()

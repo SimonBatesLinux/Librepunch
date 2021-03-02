@@ -19,4 +19,4 @@
 
 welcomeMessage = "Welcome!"
 location = "At work:"
-user_prompt = "[user pin]$ "
+user_prompt = "[employee pin]$ "
