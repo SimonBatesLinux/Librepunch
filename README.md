@@ -3,6 +3,9 @@
 Contributers:
 Simon Andrew Bates
 
+<h1>dependencies:</h1>
+bash, sh, python3
+
 <h1>Install guide:</h1>
 
 run:
@@ -19,10 +22,9 @@ hit <h4>crtl+o</h4> and enter to save the changes and than hit <h4>ctrl+x</h4> t
 
 Than run:
 <h4>
-cd ../..
-cp librepunch $HOME
-cp .librepunch $HOME
-cd
-echo "cd $HOME"
-echo "./librepunch -s"
+cd ../..<br/>
+cp librepunch $HOME<br/>
+cp -r .librepunch $HOME<br/>
+cd<br/>
+echo "./librepunch -s" >> .bashrc<br/>
 </h4>
