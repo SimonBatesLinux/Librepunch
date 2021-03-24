@@ -3,8 +3,14 @@
 Contributers:
 Simon Andrew Bates
 
-<h1>dependencies:</h1>
+<h1>Dependencies:</h1>
 bash, sh, python3
+
+<h1>Usage Guide:</h1>
+start libre punch: ./librepunch -s<br/>
+list all users: ./librewolf -l<br/>
+remove users: ./librewolf -d {pin}<br/>
+add/edit users: ./librepunch -e {pin} {name}<br/>
 
 <h1>Install guide:</h1>
 
