@@ -19,8 +19,7 @@ add/edit users: ./librepunch -e {pin} {name}<br/>
 
 run:
 <h4>git clone https://github.com/SimonBatesLinux/Librepunch.git<br/>
-cd Librepunch/.librepunch/python_files/<br/>
-nano librepunch.py</h4><br/>
+nano Librepunch/.librepunch/python_files/librepunch.py<br/>
 
 Than in the nano editor find the lines:
 <h4>USER_FILE = "$HOME/.librepunch/data_files/user.dat"<br/>
@@ -31,7 +30,6 @@ hit <h4>crtl+o</h4> and enter to save the changes and than hit <h4>ctrl+x</h4> t
 
 Than run:
 <h4>
-cd ../..<br/>
 cp librepunch $HOME<br/>
 chmod u=rwx librepunch<br/>
 cp -r .librepunch $HOME<br/>
