@@ -7,10 +7,13 @@ Simon Andrew Bates
 bash, sh, python3
 
 <h1>Usage Guide:</h1>
+<h4>
+to exit pin to command line: exit <br/>
 start libre punch: ./librepunch -s<br/>
 list all users: ./librewolf -l<br/>
 remove users: ./librewolf -d {pin}<br/>
 add/edit users: ./librepunch -e {pin} {name}<br/>
+</h4>
 
 <h1>Install guide:</h1>
 
