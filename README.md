@@ -36,4 +36,5 @@ cp librepunch $HOME<br/>
 cp -r .librepunch $HOME<br/>
 cd<br/>
 echo "./librepunch -s" >> .bashrc<br/>
+chmod u=rwx librepunch
 </h4>
