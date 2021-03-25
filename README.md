@@ -33,8 +33,8 @@ Than run:
 <h4>
 cd ../..<br/>
 cp librepunch $HOME<br/>
+chmod u=rwx librepunch<br/>
 cp -r .librepunch $HOME<br/>
 cd<br/>
 echo "./librepunch -s" >> .bashrc<br/>
-chmod u=rwx librepunch
 </h4>
