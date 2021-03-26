@@ -22,14 +22,15 @@ import sys
 import os
 import shelve
 import settings
+import time
 
 # Global varibles
 global USER_FILE
 global USERS
 global CLOCKED
 global LOG_FILE
-USER_FILE = "$HOME/.librepunch/data_files/user.dat"
-LOG_FILE = "$HOME/.librepunch/data_files/USER.log"
+USER_FILE = "/home/pi/.librepunch/data_files/user.dat"
+LOG_FILE = "/home/pi/.librepunch/data_files/USER.log"
 USERS = {}
 CLOCKED = {}
 
@@ -62,15 +63,17 @@ def init():
 				else:
 					valid = checkpin(pin)
 					if valid:
+						cur = time.localtime()
+						curTime = str(cur.tm_mday) + "/" + str(cur.tm_mon) + "/" + str(cur.tm_year) + "   " + str(cur.tm_hour) + ":" + str(cur.tm_min) + ":" + str(cur.tm_sec)
 						if pin in CLOCKED.keys():
 							del(CLOCKED[pin])
 							f = open(LOG_FILE, "a")
-							f.write("[" + pin + " : " + USERS[pin] + "]: signed out.\n")
+							f.write("[" + pin + " : " + USERS[pin] + "]: signed out at " + curTime + ".\n")
 							f.close()
 						else:
 							CLOCKED[pin] = USERS[pin]
 							f = open(LOG_FILE, "a")
-							f.write("[" + pin + " : " + USERS[pin] + "]: signed in.\n")
+							f.write("[" + pin + " : " + USERS[pin] + "]: signed in at " + curTime + ".\n")
 							f.close()
 					else:
 						input(settings.invalid_pin)
