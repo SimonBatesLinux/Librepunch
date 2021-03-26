@@ -17,4 +17,4 @@
 
 cd $HOME/.librepunch/python_files
 python3 librepunch.py $*
-
+cd $HOME
