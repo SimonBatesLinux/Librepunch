@@ -10,7 +10,7 @@ usage:<br>
 just type librepunch -? for help<br>
 <br>
 install/update:<br>
-git clone TODO<br>
+git clone https://github.com/SimonBatesLinux/librepunch.git<br>
 cd librepunch<br>
 to install run: ./INSTALL.sh<br>
 <h6>librepunch  Copyright (C) 2021 Simon Bates</h6><br>
