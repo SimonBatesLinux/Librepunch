@@ -31,25 +31,26 @@
 
 #!/bin/sh
 
-echo "Installing prerequisites"
+echo Installing prerequisites
 
 sudo apt upgrade zsh
 sudo apt upgrade python3
-sudo apt upgrade pip3
+sudo apt upgrade pip
 sudo pip install pygame
 
-echo "prequisites installed"
-echo "install librepunch"
+echo prequisites installed
+echo install librepunch
 
 sudo cp librepunch /bin/librepunch
 sudo chmod u=rwx /bin/librepunch
 sudo chmod g=rx /bin/librepunch
 sudo chmod o=rx /bin/librepunch
 
-echo "We suggest you backup $HOME/.librepunch/settings if you want to keep those settings >
+echo We suggest you backup $HOME/.librepunch/settings if you want to keep those settings
 read -rsp $'Press any key to continue...\n' -n 1 key
 
 mkdir -p $HOME/.librepunch/program_data 2> /dev/null
 cp .librepunch/main.py $HOME/.librepunch
 cp .librepunch/settings.py $HOME/.librepunch
-echo "librepunch upgraded"
+cp .librepunch/help.txt $HOME/.librepunch
+echo librepunch upgraded
