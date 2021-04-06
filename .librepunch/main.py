@@ -140,13 +140,11 @@ def mainLoop():
     
     # init pygame window
     pygame.init()
-    display = pygame.display.set_mode(settings.RESOLUTION)#, pygame.RESIZABLE)
+    display = pygame.display.set_mode(settings.RESOLUTION, pygame.FULLSCREEN)#, pygame.RESIZABLE)
     pygame.display.set_caption('librepunch')
     log = logger()
     
     Logged_Users = {}
-
-    GNU_LOGO = pygame.image.load("LICENSE.png")
 
     firstLoop = True
     
