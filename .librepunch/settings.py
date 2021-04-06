@@ -49,7 +49,7 @@ TITLE_BAR_HEIGHT = 0.10 # percent
 MESSAGE_MARGIN = 0.05 # percent
 
 # screen settings
-RESOLUTION = (800,480)
+RESOLUTION = (0,0)
 
 # pin settings
 ADMIN_PIN = "123456789"
