@@ -1,6 +1,7 @@
-#       This file is part of librepunch.
 
+#    librepunch  Copyright (C) 2021 Simon Bates
 
+#    This file is part of librepunch.
 
 #    librepunch is free software: you can redistribute it and/or modify
 
