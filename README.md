@@ -18,7 +18,7 @@ add/edit users: ./librepunch -e {pin} {name}<br/>
 <h1>Install guide:</h1>
 
 run:
-<h4>git clone https://github.com/SimonBatesLinux/Librepunch.git<br/>
+<h4>git clone https://github.com/SimonBatesLinux/librepunch.git<br/>
 nano Librepunch/.librepunch/python_files/librepunch.py<br/>
 
 Than in the nano editor find the lines:
